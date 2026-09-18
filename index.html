@@ -3,83 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gizlilik Politikası — EzFe Yazılım</title>
-<style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; line-height: 1.6; color: #1c1c1e; background: #fff; }
-  h1 { font-size: 26px; margin-bottom: 4px; }
-  .updated { color: #6b6b70; font-size: 14px; margin-bottom: 32px; }
-  h2 { font-size: 20px; margin-top: 40px; border-bottom: 1px solid #e5e5ea; padding-bottom: 8px; }
-  h3 { font-size: 17px; margin-top: 28px; color: #d32f2f; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  .app-badge { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .3px; text-transform: uppercase; color: #fff; background: #d32f2f; padding: 2px 10px; border-radius: 999px; margin-bottom: 8px; }
-  .note { background: #f5f5f7; border-radius: 10px; padding: 14px 18px; font-size: 14px; color: #48484a; margin: 16px 0; }
-  footer { margin-top: 56px; font-size: 13px; color: #8e8e93; border-top: 1px solid #e5e5ea; padding-top: 16px; }
-</style>
+<title>Gizlilik Politikaları — EzFe Yazılım</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 16 Eylül 2026 · Geliştirici: EzFe Yazılım</p>
+<h1>Gizlilik Politikaları</h1>
+<p class="updated">Geliştirici: EzFe Yazılım</p>
 
 <p>
-Bu gizlilik politikası, EzFe Yazılım tarafından geliştirilen <strong>Anahtarlık</strong>,
-<strong>Hızlı Okuma</strong>, <strong>Görev Tahtası</strong> ve <strong>Namaz</strong>
-uygulamaları için geçerlidir.
+EzFe Yazılım tarafından geliştirilen uygulamaların her birinin kendi gizlilik
+politikası sayfası aşağıdadır. Dört uygulama da aynı temel ilkelerle
+geliştirilir (hesap yok, takip/analitik yok, veri satışı yok, tüm veriler
+yalnızca cihazınızda saklanır) — her sayfada ayrıca o uygulamaya özel
+izin/özellik açıklamaları yer alır.
 </p>
 
-<h2>Ortak İlkeler</h2>
-<p>Dört uygulama da aynı temel ilkelerle geliştirilmiştir:</p>
-<ul>
-  <li><strong>Hesap yok.</strong> Hiçbir uygulama kayıt/giriş istemez, e-posta veya kişisel kimlik bilgisi toplamaz.</li>
-  <li><strong>Takip/analitik yok.</strong> Hiçbirinde reklam kütüphanesi, analitik SDK'sı veya üçüncü taraf takip aracı bulunmaz.</li>
-  <li><strong>Veri satışı/paylaşımı yok.</strong> Geliştirici, hiçbir kullanıcı verisine erişemez, veri toplamaz, üçüncü taraflarla paylaşmaz veya satmaz.</li>
-  <li><strong>Yerel depolama.</strong> Tüm uygulama verileri (ayarlar, içerikler, geçmiş) yalnızca kendi cihazınızda, cihaz üzerindeki yerel veritabanında (Hive) saklanır.</li>
-  <li><strong>Silme.</strong> Uygulamayı cihazınızdan kaldırdığınızda ilişkili tüm yerel veriler de silinir.</li>
+<ul class="app-list">
+  <li><a href="namaz.html">Namaz</a></li>
+  <li><a href="anahtarlik.html">Anahtarlık</a></li>
+  <li><a href="hizlioku.html">Hızlı Okuma</a></li>
+  <li><a href="gorev-tahtasi.html">Görev Tahtası</a></li>
 </ul>
-
-<div class="note">
-Aşağıda her uygulamanın kullandığı izin/özellikler ve bunların nedeni ayrı ayrı açıklanmıştır.
-Burada yer almayan hiçbir veri toplanmaz.
-</div>
-
-<h2>Uygulamaya Özel Bilgiler</h2>
-
-<span class="app-badge">Anahtarlık</span>
-<h3>Anahtarlık</h3>
-<ul>
-  <li><strong>Biyometrik kimlik doğrulama (Face ID / Touch ID / parmak izi):</strong> Yalnızca uygulamaya erişimi kilitlemek için kullanılır. Bu işlem tamamen işletim sistemi tarafından yürütülür; biyometrik veri uygulamaya veya geliştiriciye asla ulaşmaz.</li>
-  <li><strong>Şifre üretimi:</strong> Şifreler, girdiğiniz bilgilerden PBKDF2 algoritmasıyla, tamamen cihazınızda ve deterministik olarak türetilir. Üretilen şifreler hiçbir yerde saklanmaz ve internete gönderilmez.</li>
-</ul>
-
-<span class="app-badge">Hızlı Okuma</span>
-<h3>Hızlı Okuma</h3>
-<ul>
-  <li><strong>Dosya erişimi:</strong> Yalnızca siz bir PDF seçtiğinizde, seçtiğiniz dosyayı okumak için kullanılır. Dosya içeriği cihazınızda işlenir ve kaldığınız yeri hatırlamak için yerel olarak saklanır. Hiçbir dosya cihazınızdan dışarı gönderilmez.</li>
-</ul>
-
-<span class="app-badge">Görev Tahtası</span>
-<h3>Görev Tahtası</h3>
-<ul>
-  <li><strong>Bildirimler:</strong> Girdiğiniz görev hatırlatıcıları için yerel bildirimler kullanılır; bu bildirimler cihazınızda zamanlanır, herhangi bir sunucuya veri gönderilmez.</li>
-  <li><strong>İsteğe bağlı yerel ağ senkronizasyonu:</strong> Uygulama, aynı Wi-Fi ağındaki iki cihazınız arasında (ör. telefon ↔ bilgisayar) görev verilerini senkronize etmenizi sağlayan isteğe bağlı bir özellik sunar. Bu özellik yalnızca siz açtığınızda ve belirlediğiniz bir PIN ile eşleştiğinde çalışır; veri yalnızca sizin cihazlarınız arasında, yerel ağ üzerinden doğrudan aktarılır — internete veya herhangi bir sunucuya (geliştirici dahil) hiçbir veri gönderilmez.</li>
-  <li><strong>Dışa aktarma (Excel/PDF/Yedek):</strong> Oluşturduğunuz raporlar veya yedekler yalnızca cihazınızın kendi paylaşım menüsü (e-posta, dosyalar, vb.) üzerinden dışarı çıkar; uygulama bu dosyaları kendi başına hiçbir yere yüklemez.</li>
-</ul>
-
-<span class="app-badge">Namaz</span>
-<h3>Namaz</h3>
-<ul>
-  <li><strong>Konum:</strong> Namaz vakitlerini gösterebilmek için önce il/ilçe seçersiniz (GPS gerekmez). "Konumumdan bul" düğmesine basarsanız, cihazınızın GPS konumu yalnızca en yakın ili bulmak için bir kerelik ve tamamen cihaz üzerinde kullanılır; konum bilgisi hiçbir sunucuya gönderilmez veya kaydedilmez.</li>
-  <li><strong>Kıble pusulası:</strong> Cihazınızın pusula/manyetometre sensörü kıble yönünü hesaplamak için kullanılır; bu veri yalnızca ekranda gösterilir, hiçbir yerde saklanmaz veya iletilmez.</li>
-  <li><strong>İnternet erişimi:</strong> Uygulama, seçtiğiniz il/ilçeye ait namaz vakitleri ve dini takvim bilgilerini Türkiye Diyanet İşleri Başkanlığı'nın herkese açık verilerinden alır. Bu, yalnızca genel/herkese açık bilgiyi indiren tek yönlü bir istektir; kişisel bilginiz Diyanet'e veya başka bir tarafa gönderilmez.</li>
-  <li><strong>Bildirimler:</strong> Namaz vakti alarmları ve hatırlatmalar cihazınızda yerel olarak zamanlanır.</li>
-</ul>
-
-<h2>Çocukların Gizliliği</h2>
-<p>Hiçbir uygulama bilerek 13 yaşın altındaki çocuklardan veri toplamaz; zaten hiçbir uygulama herhangi bir kişisel veri toplamamaktadır.</p>
-
-<h2>Politikadaki Değişiklikler</h2>
-<p>Bu politika güncellenirse, bu sayfadaki "son güncelleme" tarihi değiştirilir.</p>
 
 <h2>İletişim</h2>
 <p>Sorularınız için: <strong>mase.ezfe@icloud.com</strong></p>
